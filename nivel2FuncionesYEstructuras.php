@@ -43,3 +43,5 @@ function compra($cantidad, $articulo) {
     return $cantidad*$articulo;
 }
 ?>
+
+</body>

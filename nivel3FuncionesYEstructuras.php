@@ -24,4 +24,6 @@ function esPrimo($n1) {
 }
 ?>
 
+</body>
+
 
