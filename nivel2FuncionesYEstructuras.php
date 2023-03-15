@@ -7,19 +7,19 @@
 
 <?php
 // Ejercicio 1:
-añosOlimpicos();
+olympicYears();
 echo "</br>";
 echo "</br>";
-function añosOlimpicos() {
-    foreach (range(1960, 2016, 4) as $años) {  // Rango inicial, rango final, incremento, genera array
-        echo $años."</br>";
+function olympicYears() {
+    foreach (range(1960, 2016, 4) as $years) {  // Rango inicial, rango final, incremento, genera array
+        echo $years."</br>";
     }
 }
 ?>
 
 <?php
 // Ejercicio 2:
-echo "El pago es de ". pagoTelefono (5) . " centimos";
+echo "El pago es de ". pagoTelefono (4) . " centimos";
 echo "</br>";
 echo "</br>";
 function pagoTelefono ($minutos) {
@@ -27,18 +27,16 @@ function pagoTelefono ($minutos) {
         if ($minutos>3) {
             return $pago + ($minutos-3)*5;
         }
-        else {
-            return $pago;
-        }
+        return $pago;
 }
 ?>
 
 <?php
 // Ejercicio 3:
-$chocolate = 1;
-$chicles = 0.5;
-$caramelos = 1.5;
-echo "La compra total es de " . compra(2, $chocolate) + compra(1, $chicles) + compra(1, $caramelos) . "€";
+define("chocolate", 1);
+define("chicles",0.5);
+define("caramelos",1.5);
+echo "La compra total es de " . compra(2, chocolate) + compra(1, chicles) + compra(1, caramelos) . "€";
 function compra($cantidad, $articulo) {
     return $cantidad*$articulo;
 }

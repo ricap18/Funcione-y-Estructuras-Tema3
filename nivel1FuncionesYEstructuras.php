@@ -26,8 +26,8 @@ escondrijo();
 echo "</br>";
 echo "</br>";
 function escondrijo() {
-    for ($i=0; $i < 10; $i+2) { 
-        echo $i+=2;
+    for ($i=0; $i < 10; $i+=2) { 
+        echo $i;
         echo " ";
     }
 }
@@ -39,8 +39,8 @@ escondrijo2(40);
 echo "</br>";
 echo "</br>";
 function escondrijo2($n1) {
-    for ($i=0; $i < $n1; $i+2) { 
-        echo $i+=2;
+    for ($i=0; $i < $n1; $i+=2) { 
+        echo $i;
         echo " ";
     }
 }
@@ -54,8 +54,8 @@ escondrijo3(20);
 echo "</br>";
 echo "</br>";
 function escondrijo3($n1=10) {   //  Le asigno un valor por defecto al parametro
-    for ($i=0; $i < $n1; $i+2) { 
-        echo $i+=2 . " ";
+    for ($i=0; $i < $n1; $i+=2) { 
+        echo $i;
         echo " ";
     }
 }
@@ -63,18 +63,18 @@ function escondrijo3($n1=10) {   //  Le asigno un valor por defecto al parametro
 
 <?php
 // Ejercicio 5:
-verificarGrado("38%");
+verificarGrado(78);
 echo "</br>";
 echo "</br>";
 function verificarGrado($grado) {
-    if ($grado >= "60%" || $grado == "100%" ) {
-        echo "Su grado es de Primera División";
+    if ($grado >= 60 || $grado == 100 ) {
+        echo "Con un " .  $grado . "%, su grado es de Primera División";
     }
-    elseif ($grado >= "45%") {
-        echo "Su grado es de Segunda División";
+    elseif ($grado >= 45) {
+        echo "Con un " .  $grado . "%, su grado es de Segunda División";
     }
-    elseif ($grado >= "33%") {
-        echo "Su grado es de Tercera División";
+    elseif ($grado >= 33) {
+        echo "Con un " .  $grado . "%, su grado es de Tercera División";
     }
     else {
         echo "A reprobado el curso";
@@ -85,10 +85,10 @@ function verificarGrado($grado) {
 <?php
 // Ejercicio 6:
 if (isBitten()==0) {
-    echo "True";
+    echo "False";
 }
 else {
-    echo "False";
+    echo "True";
 }
 echo "</br>";
 echo "</br>";

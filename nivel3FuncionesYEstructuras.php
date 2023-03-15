@@ -7,20 +7,31 @@
 
 <?php
 //Ejercicio 1:
-echo esPrimo(29);
+cribaDeNumeros(1, 50);
 
-
-function esPrimo($n1) {
-     if ($n1==0 || $n1==1 || $n1==4) {
-       return $n1 . " no es numero primo";
+function cribaDeNumeros($min, $max){
+  for ($i=$min; $i <= $max; $i++) { 
+     if (esPrimo($i)) {
+        echo "El numero ". $i . " Es primo"."</br>";
      }
-     for ($i = 2; $i < $n1/2; $i++) { 
-         if ($n1 % $i == 0) {
-            return $n1 . " no es numero primo";
-         }
+     else {
+        echo "El numero ". $i . " No es primo"."</br>";
      }
- return $n1 . " si es numero primo";
-     
+  }
+}
+function esPrimo($n1){
+   $contador = 0;
+   for ($i=1; $i<=$n1; $i++) { 
+      if ($n1%$i==0) {
+         $contador += 1;
+      }
+   }
+   if ($contador==2) {
+      return true;
+   }
+   else {
+      return false;
+   }
 }
 ?>
 
